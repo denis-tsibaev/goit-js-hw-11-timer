@@ -1,7 +1,9 @@
 new CountdownTimer({
 	selector: '#timer-1',
-	targetDate: new Date('Jul 17, 2019'),
+	targetDate: new Date('Jul 22, 2021'),
   });
+
+  const time = targetDate - Date.now();
 
  // Для подсчета значений используй следующие готовые формулы, где time - разница между targetDate и текущей датой.
 
@@ -29,3 +31,14 @@ const mins = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
  * миллисекунд в одной секунде (1000)
  */
 const secs = Math.floor((time % (1000 * 60)) / 1000);
+
+
+
+const timer = {
+	start() {
+		const startTime = Date.now();
+		setInterval(()=> {
+console.log('qweqwe')
+		}, 1000);
+	},
+};

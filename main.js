@@ -27,7 +27,7 @@ const timer = {
             const { days, hours, mins, secs } = getTimeComponents(deltaTime);
             const time = getTimeComponents(deltaTime);
 
-            updateClockface(time);
+            updateClockface(refs, time);
 
             console.log(`${days}:${hours}:${mins}:${secs}`);
         }, 1000);

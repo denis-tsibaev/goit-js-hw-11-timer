@@ -21,6 +21,9 @@ function getTimeComponents(time) {
 const timer = {
     start() {
         const targetDate = new Date('08:00 Jul 05 2021');
+		const headline = document.querySelector('.headline');
+		headline.textContent=`до ${targetDate} осталось`;
+
         setInterval(() => {
             const currentTime = Date.now();
             const deltaTime = targetDate - currentTime;
@@ -40,7 +43,7 @@ const refs = {
     spanDays: document.querySelector('[data-value="days"]'),
     spanHours: document.querySelector('[data-value="hours"]'),
     spanMins: document.querySelector('[data-value="mins"]'),
-    spanSecs: document.querySelector('[data-value="secs"]'),
+    spanSecs: document.querySelector('[data-value="secs"]'),	
 };
 
 function updateClockface(

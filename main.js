@@ -16,7 +16,7 @@ class CountdownTimer {
             const { days, hours, mins, secs } = this.getTimeComponents(deltaTime);
             const time = this.getTimeComponents(deltaTime);
 
-            this.onTick(time);
+            this.onTick(time, refs);
 
             console.log(`${days}:${hours}:${mins}:${secs}`);
         }, 1000);

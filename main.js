@@ -36,7 +36,8 @@ class CountdownTimer {
     start() {
         const targetTime = this.targetDate.getTime();
         const markup = this.useMarkup();
-        const headline = document.querySelector('.headline');
+		const selectorELement = document.querySelector(this.selector);
+        const headline = selectorELement.querySelector('.headline');
         headline.textContent = `до ${
             this.targetDate.getDate() +
             '-' +
@@ -51,7 +52,7 @@ class CountdownTimer {
             const deadlineTime = this.getTimeComponents(deltaTime);
             this.updateClockface(markup, deadlineTime);
 
-            console.log(deadlineTime);
+            // console.log(deadlineTime);
         }, 1000);
     }
 
@@ -69,4 +70,10 @@ class CountdownTimer {
 const timer = new CountdownTimer({
     selector: '#timer-1',
     targetDate: new Date('July 05, 2021'),
+});
+
+
+const timer2 = new CountdownTimer({
+    selector: '#timer-2',
+    targetDate: new Date('July 22, 2021'),
 });
